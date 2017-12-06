@@ -13,6 +13,10 @@ function sendPosition(x, y) {
 }
 
 
+function setName(name) {
+  socket.emit('setName', name);
+}
+
 socket.on('setId', function(id){
   player.id = id;
   console.log("socket on")

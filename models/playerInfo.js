@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var playerSchema = new mongoose.Schema({
-name: { type: String, required: [true, "First Name is required"]}
+name: { type: String },
+socketid : String
+
 });
 
-var playerName = mongoose.model('playerName', playerSchema);
-
-module.exports = playerName;
+module.exports =mongoose.model('player', playerSchema);

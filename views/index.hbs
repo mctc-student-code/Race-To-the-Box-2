@@ -8,11 +8,11 @@
   <div id="modal">
       <div class="modalconent">
            <h1></h1>
-           <form method="POST" action="/addPlayer">
-  Name: <input name="name" required value={{playerName.name}}>
+           <!-- <form method="POST" action="/addPlayer"> -->
+  Name: <input id="nametext" name="name" required value={{playerName.name}}>
   <input type="hidden" name="_id" value="{{playerName._id}}">
-  <br><input type="submit" value="submit">
-</form>
+  <br><button  id="namebutton" value="submit">Submit</button>
+<!-- </form> -->
 
           <!-- <p>fasfsdfasfsfsdfsdfsdsffsd</p> -->
           <button id="button">Close</button>

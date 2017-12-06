@@ -1,4 +1,19 @@
+
+      document.getElementById('namebutton').onclick = function () {
+          var name = document.getElementById('nametext').value;
+          console.log("Name is " + name);
+          setName(name);
+      };
+
+
+
 window.onload = function () {
+
+
+
+
+
+
     document.getElementById('button').onclick = function () {
         document.getElementById('modal').style.display = "none"
     };

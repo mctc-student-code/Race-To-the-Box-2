@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var playerName = require('../models/playerInfo')
+//var playerName = require('../models/playerInfo')
 
 
 var line_history = [];

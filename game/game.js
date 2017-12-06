@@ -4,11 +4,27 @@ var players = {};   // dict of id + player obj
 
 const MAX_PLAYERS = 5;
 
+var Player = require('../models/playerinfo');
+
 function init(io) {
 
   io.on('connect', function(socket){
 
+    var player = Player({ socketid : socket.id} ).save();  // todo callback
+
+    socket.on("setName", function(name){
+      //save here.
+
+      console.log("set name for " + name + " socket id " + socket.id);
+
+
+      Player.findOneAndUpdate( { socketid : socket.id}, {$set : { name : name }}).then( () => {}).catch((err)=> {console.log(err)});
+
+    })
+
     console.log('someone connected', socket.id);
+
+
     io.sockets.emit('allPlayerLocations', players);  // send to everyone.
 
 
